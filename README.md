@@ -1,200 +1,143 @@
-<img src="https://raw.githubusercontent.com/skylot/jadx/master/jadx-gui/src/main/resources/logos/jadx-logo.png" width="64" align="left" />
 
-## JADX
+## Contents
+* [Talks](#Talks)
+* [Articles](#articles)
+* [Sites/Blogs](#sitesblogs)
+* [Tools](#tools)
+* [Libraries](#libraries)
+* [Books](#books)
+* [About](#about)
 
-[![Build status](https://github.com/skylot/jadx/workflows/Build/badge.svg)](https://github.com/skylot/jadx/actions?query=workflow%3ABuild)
-![GitHub contributors](https://img.shields.io/github/contributors/skylot/jadx)
-![GitHub all releases](https://img.shields.io/github/downloads/skylot/jadx/total)
-![GitHub release (latest by SemVer)](https://img.shields.io/github/downloads/skylot/jadx/latest/total)
-![Latest release](https://img.shields.io/github/release/skylot/jadx.svg)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.skylot/jadx-core)](https://search.maven.org/search?q=g:io.github.skylot%20AND%20jadx)
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+## Talks
 
-**jadx** - Dex to Java decompiler
+2013:
 
-Command line and GUI tools for producing Java source code from Android Dex and Apk files
+* Going Native 2013 - [Andrei Alexandrescu, Writing Quick Code in C++, Quickly](https://www.youtube.com/watch?v=MvFj8qo1iuA)
+* Going Native 2013 - [Stephan T. Lavavej, rand() Considered Harmful](https://www.youtube.com/watch?v=LDPMpc-ENqY)
+* Going Native 2013 - [Sean Parent, C++ Seasoning](https://www.youtube.com/watch?v=qH6sSOr-yk8)
 
-:exclamation::exclamation::exclamation: Please note that in most cases **jadx** can't decompile all 100% of the code, so errors will occur. Check [Troubleshooting guide](https://github.com/skylot/jadx/wiki/Troubleshooting-Q&A#decompilation-issues) for workarounds
+2014:
 
-**Main features:**
-- decompile Dalvik bytecode to java classes from APK, dex, aar, aab and zip files
-- decode `AndroidManifest.xml` and other resources from `resources.arsc`
-- deobfuscator included
+* code::dive conference 2014 [Scott Meyers: Cpu Caches and Why You Care](https://www.youtube.com/watch?v=WDIkqP4JbkE)([slides](http://www.aristeia.com/TalkNotes/codedive-CPUCachesHandouts.pdf))
+* CppCon 2014 [Andrei Alexandrescu "Optimization Tips - Mo' Hustle Mo' Problems"](https://www.youtube.com/watch?v=Qq_WaiwzOtI)
+* CppCon 2014 [Mike Acton "Data-Oriented Design and C++" ](https://www.youtube.com/watch?v=rX0ItVEVjHc)
+* CppCon 2014 [Chandler Carruth "Efficiency with Algorithms, Performance with Data Structures"](https://www.youtube.com/watch?v=fHNmRkzxHWs)
 
-**jadx-gui features:**
-- view decompiled code with highlighted syntax
-- jump to declaration
-- find usage
-- full text search
-- smali debugger, check [wiki page](https://github.com/skylot/jadx/wiki/Smali-debugger) for setup and usage
+2015:
 
-Jadx-gui key bindings can be found [here](https://github.com/skylot/jadx/wiki/JADX-GUI-Key-bindings)
+* code::dive conference 2015 [Andrei Alexandrescu - Writing Fast Code I](https://www.youtube.com/watch?v=vrfYLlR8X8k) ([slides](http://codedive.pl/wp-content/uploads/2016/01/FastCode-handouts.pdf))
+* code::dive conference 2015 [Andrei Alexandrescu - Writing Fast Code II](https://www.youtube.com/watch?v=9tvbz8CSI8M) ([slides](http://codedive.pl/wp-content/uploads/2016/01/FastCode-handouts.pdf))
+* CppCon 2015 [Chandler Carruth, "Tuning C++: Benchmarks, and CPUs, and Compilers! Oh My!"](https://www.youtube.com/watch?v=nXaxk27zwlk)
+* CppCon 2015 [Bryce Adelstein-Lelbach “Benchmarking C++ Code"](https://www.youtube.com/watch?v=zWxSZcpeS8Q)
+* Meeting C++ 2015 [Understanding Compiler Optimization - Chandler Carruth - Opening Keynote](https://www.youtube.com/watch?v=FnGCDLhaxKU)
 
-See these features in action here: [jadx-gui features overview](https://github.com/skylot/jadx/wiki/jadx-gui-features-overview)
+2016:
 
-<img src="https://user-images.githubusercontent.com/118523/142730720-839f017e-38db-423e-b53f-39f5f0a0316f.png" width="700"/>
+* ACCU 2016 ['Fastware' - Andrei Alexandrescu](https://www.youtube.com/watch?v=AxnotgLql0k)
+* C++Now 2016 [Timur Doumler: C++ Performance in Practice: Align, Vectorise, Cache, Jump!](https://www.youtube.com/watch?v=c-hZpChQKe0) ([slides](https://github.com/boostcon/cppnow_presentations_2016/blob/master/03_friday/cpp_performance_in_practice_align_vectorise_cache_jump.pdf))
+* C++Now 2016 [David Stone: Exceptional Performance](https://www.youtube.com/watch?v=0_FQIDEf7_Q)
+* C++Now 2016 [Jason Turner: Practical Performance Practices](https://www.youtube.com/watch?v=lNnBExDoNSQ)
+* CppCon 2016 [Timur Doumler “Want fast C++? Know your hardware!" ](https://www.youtube.com/watch?v=BP6NxVxDQIs)
+* CppCon 2016 [Jason Turner “Practical Performance Practices" ](https://www.youtube.com/watch?v=uzF4u9KgUWI)
+* CppCon 2016 [Chandler Carruth “High Performance Code 201: Hybrid Data Structures" ](https://www.youtube.com/watch?v=vElZc6zSIXM)
+* CppCon 2016 [McKenney “Beyond the Issaquah Challenge: High-Performance Scalable Complex Updates"](https://www.youtube.com/watch?v=qcD2Zj9GgI4)
+* CppCon 2016 [D. Dechev & D. Zhang “High Performance C++ Concurrent Transactional Data Structures"](https://www.youtube.com/watch?v=uDNb8JL0vv8)
+* CppCon 2016 [Matthew Bentley “Colonies, performance and why you should care" ](https://www.youtube.com/watch?v=wBER1R8YyGY)
+* CppCon 2016 [Christiaan Pretorius “Cache Optimized Hash Tables” ](https://www.youtube.com/watch?v=aXj_DsIx1xs)
+* CppCon 2016 [Tim Haines “Improving Performance Through Compiler Switches..." ](https://www.youtube.com/watch?v=w5Z4JlMJ1VQ)
 
-### Download
-- release
-  from [github: ![Latest release](https://img.shields.io/github/release/skylot/jadx.svg)](https://github.com/skylot/jadx/releases/latest)
-- latest [unstable build ![GitHub commits since tagged version (branch)](https://img.shields.io/github/commits-since/skylot/jadx/latest/master)](https://nightly.link/skylot/jadx/workflows/build-artifacts/master)
+## Articles
+ 
+* [Three Optimization Tips for C++](https://www.facebook.com/notes/facebook-engineering/three-optimization-tips-for-c/10151361643253920/), by Andrei Alexandrescu, @Facebook Engineering
+* [why GNU grep is fast](https://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html)
+* [Hash Functions all the way down](http://aras-p.info/blog/2016/08/02/Hash-Functions-all-the-way-down/) from Aras-P, and the follow up [here](http://aras-p.info/blog/2016/08/09/More-Hash-Function-Tests/)
+* [Why do CPUs have multiple cache levels?](https://fgiesen.wordpress.com/2016/08/07/why-do-cpus-have-multiple-cache-levels/)
+* [ETW Central](https://randomascii.wordpress.com/2015/09/24/etw-central/) - by RandomASCII
+* [Micro benchmarking libraries for C++ ](http://www.bfilipek.com/2016/01/micro-benchmarking-libraries-for-c.html) - on Bartek's blog
+* [How to start with Software Optimization](http://www.bfilipek.com/2014/07/flexible-particle-system-how-to-start.html), from Flexible Particle Experiments series, Bartek's blog.
+* [Taking advantage of cache coherence in your programs](http://supercomputingblog.com/optimization/taking-advantage-of-cache-coherence-in-your-programs/)
+* [Gallery of Processor Cache Effects, C#](http://igoro.com/archive/gallery-of-processor-cache-effects/)
+* [How We Beat C++ STL Binary Search](https://academy.realm.io/posts/how-we-beat-cpp-stl-binary-search/)
+* [C++ benchmark – std::vector VS std::list VS std::deque](http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html)
+* [Container Study](http://www.joshbarczak.com/blog/?p=525)
+* [Associative-Container Performance Tests](https://gcc.gnu.org/onlinedocs/libstdc++/ext/pb_ds/assoc_performance_tests.html)
+* [C++ Core Guidelines, Performance section](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-performance)
+* [C++ Best Practices, Performance section](https://lefticus.gitbooks.io/cpp-best-practices/content/08-Considering_Performance.html)
+* [That’s Not Normal–the Performance of Odd Floats](https://randomascii.wordpress.com/2012/05/20/thats-not-normalthe-performance-of-odd-floats/)
+* [gprof, Valgrind and gperftools – an evaluation of some tools for application level CPU profiling on Linux](http://gernotklingler.com/blog/gprof-valgrind-gperftools-evaluation-tools-application-level-cpu-profiling-linux/)
+* [The Performance API (PAPI) project](http://icl.cs.utk.edu/papi/overview/index.html)
+* [Roofline Performance Model](https://crd.lbl.gov/departments/computer-science/PAR/research/roofline/)
+* [C++ timing strategies compared (in Windows) ](http://baremetalcode.blogspot.com/2011/10/c-timing-strategies-compared-in-windows.html) - from baremetalcode blog.
+* [Simply about complex - Data Oriented Design by example](https://nikitablack.github.io/2017/02/02/Data-Oriented-Design-by-example.html)
+* [Guide into OpenMP: Easy multithreading programming for C++](http://bisqwit.iki.fi/story/howto/openmp/)
+* [C++ Optimization Bibliography - Kurt Guntheroth's](http://oldhandsblog.blogspot.bg/2016/09/c-optimization-bibliography.html)
 
-After download unpack zip file go to `bin` directory and run:
-- `jadx` - command line version
-- `jadx-gui` - UI version
+Manuals:
 
-On Windows run `.bat` files with double-click\
-**Note:** ensure you have installed Java 11 or later 64-bit version.
-For Windows, you can download it from [oracle.com](https://www.oracle.com/java/technologies/downloads/#jdk17-windows) (select x64 Installer).
+* [Intel® 64 and IA-32 Architectures Optimization Reference Manual](http://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-architectures-optimization-manual.html)
 
-### Install
-1. Arch linux ![Arch Linux package](https://img.shields.io/archlinux/v/extra/any/jadx?label=)
-    ```bash
-    sudo pacman -S jadx
-    ```
-2. macOS ![homebrew version](https://img.shields.io/homebrew/v/jadx?label=)
-    ```bash
-    brew install jadx
-    ```
-3. [Flathub ![Flathub](https://img.shields.io/flathub/v/com.github.skylot.jadx?label=)](https://flathub.org/apps/details/com.github.skylot.jadx)
-   ```bash
-   flatpak install flathub com.github.skylot.jadx
-   ```
+## Sites/Blogs
 
-### Use jadx as a library
-You can use jadx in your java projects, check details on [wiki page](https://github.com/skylot/jadx/wiki/Use-jadx-as-a-library)
+* [Agner`s CPU blog](http://www.agner.org/optimize/blog/)
+* [Agner's Software optimization resources](http://www.agner.org/optimize/)
+* [The ryg blog](https://fgiesen.wordpress.com/)
+* [Random ASCII](https://randomascii.wordpress.com/)
+* [The Every Computer Performance Blog](https://rwwescott.wordpress.com/)
+* [The Supercomputing Blog](http://supercomputingblog.com/)
+* [Daniel Lemire's blog](http://lemire.me/blog/)
+* [Wojciech Mula's site: 0x80.pl - articles on performance, SIMD](http://0x80.pl/articles/index.html)
+* [Bartek's programming blog](http://www.bfilipek.com)
 
-### Build from source
-JDK 11 or higher must be installed:
-```
-git clone https://github.com/skylot/jadx.git
-cd jadx
-./gradlew dist
-```
+## Tools
 
-(on Windows, use `gradlew.bat` instead of `./gradlew`)
+### Free
 
-Scripts for run jadx will be placed in `build/jadx/bin`
-and also packed to `build/jadx-<version>.zip`
+* [AMD Code XL](http://developer.amd.com/tools-and-sdks/opencl-zone/codexl/)
+* [Very Sleepy](http://www.codersnotes.com/sleepy/)
+* [Proffy](http://www.pauldoo.com/proffy/)
+* [Windows Performance Toolkit - XPERF](https://msdn.microsoft.com/en-us/library/hh162945.aspx)
+* [Performance and Diagnostic Tools in Visual Studio 2015](https://msdn.microsoft.com/en-us/magazine/dn973013.aspx)
+* [Valgrind](http://valgrind.org/)
+* [TAU Performance System](http://www.cs.uoregon.edu/research/tau/home.php)
+* [Google Performance Tools (gperftools)](https://github.com/gperftools/gperftools)
+* [Linux perf tools](https://perf.wiki.kernel.org/index.php/Tutorial)
+* [NVIDIA Visual Profiler](https://developer.nvidia.com/nvidia-visual-profiler)
+* [Qualcomm Snapdragon Profiler](https://developer.qualcomm.com/software/snapdragon-profiler)
+* [Oracle Solaris Studio Performance Analyzer](http://www.oracle.com/technetwork/server-storage/solarisstudio/features/performance-analyzer-2292312.html)
+* [OProfile](http://oprofile.sourceforge.net/about/) for Linux
 
-### Usage
-```
-jadx[-gui] [command] [options] <input files> (.apk, .dex, .jar, .class, .smali, .zip, .aar, .arsc, .aab)
-commands (use '<command> --help' for command options):
-  plugins	  - manage jadx plugins
+### Paid
 
-options:
-  -d, --output-dir                    - output directory
-  -ds, --output-dir-src               - output directory for sources
-  -dr, --output-dir-res               - output directory for resources
-  -r, --no-res                        - do not decode resources
-  -s, --no-src                        - do not decompile source code
-  --single-class                      - decompile a single class, full name, raw or alias
-  --single-class-output               - file or dir for write if decompile a single class
-  --output-format                     - can be 'java' or 'json', default: java
-  -e, --export-gradle                 - save as android gradle project
-  -j, --threads-count                 - processing threads count, default: 4
-  -m, --decompilation-mode            - code output mode:
-                                         'auto' - trying best options (default)
-                                         'restructure' - restore code structure (normal java code)
-                                         'simple' - simplified instructions (linear, with goto's)
-                                         'fallback' - raw instructions without modifications
-  --show-bad-code                     - show inconsistent code (incorrectly decompiled)
-  --no-imports                        - disable use of imports, always write entire package name
-  --no-debug-info                     - disable debug info parsing and processing
-  --add-debug-lines                   - add comments with debug line numbers if available
-  --no-inline-anonymous               - disable anonymous classes inline
-  --no-inline-methods                 - disable methods inline
-  --no-move-inner-classes             - disable move inner classes into parent
-  --no-inline-kotlin-lambda           - disable inline for Kotlin lambdas
-  --no-finally                        - don't extract finally block
-  --no-replace-consts                 - don't replace constant value with matching constant field
-  --escape-unicode                    - escape non latin characters in strings (with \u)
-  --respect-bytecode-access-modifiers - don't change original access modifiers
-  --mappings-path                     - deobfuscation mappings file or directory. Allowed formats: Tiny and Tiny v2 (both '.tiny'), Enigma (.mapping) or Enigma directory
-  --mappings-mode                     - set mode for handling the deobfuscation mapping file:
-                                         'read' - just read, user can always save manually (default)
-                                         'read-and-autosave-every-change' - read and autosave after every change
-                                         'read-and-autosave-before-closing' - read and autosave before exiting the app or closing the project
-                                         'ignore' - don't read or save (can be used to skip loading mapping files referenced in the project file)
-  --deobf                             - activate deobfuscation
-  --deobf-min                         - min length of name, renamed if shorter, default: 3
-  --deobf-max                         - max length of name, renamed if longer, default: 64
-  --deobf-whitelist                   - space separated list of classes (full name) and packages (ends with '.*') to exclude from deobfuscation, default: android.support.v4.* android.support.v7.* android.support.v4.os.* android.support.annotation.Px androidx.core.os.* androidx.annotation.Px
-  --deobf-cfg-file                    - deobfuscation mappings file used for JADX auto-generated names (in the JOBF file format), default: same dir and name as input file with '.jobf' extension
-  --deobf-cfg-file-mode               - set mode for handling the JADX auto-generated names' deobfuscation map file:
-                                         'read' - read if found, don't save (default)
-                                         'read-or-save' - read if found, save otherwise (don't overwrite)
-                                         'overwrite' - don't read, always save
-                                         'ignore' - don't read and don't save
-  --deobf-use-sourcename              - use source file name as class name alias
-  --deobf-res-name-source             - better name source for resources:
-                                         'auto' - automatically select best name (default)
-                                         'resources' - use resources names
-                                         'code' - use R class fields names
-  --use-kotlin-methods-for-var-names  - use kotlin intrinsic methods to rename variables, values: disable, apply, apply-and-hide, default: apply
-  --rename-flags                      - fix options (comma-separated list of):
-                                         'case' - fix case sensitivity issues (according to --fs-case-sensitive option),
-                                         'valid' - rename java identifiers to make them valid,
-                                         'printable' - remove non-printable chars from identifiers,
-                                        or single 'none' - to disable all renames
-                                        or single 'all' - to enable all (default)
-  --integer-format                    - how integers are displayed:
-                                         'auto' - automatically select (default)
-                                         'decimal' - use decimal
-                                         'hexadecimal' - use hexadecimal
-  --fs-case-sensitive                 - treat filesystem as case sensitive, false by default
-  --cfg                               - save methods control flow graph to dot file
-  --raw-cfg                           - save methods control flow graph (use raw instructions)
-  -f, --fallback                      - set '--decompilation-mode' to 'fallback' (deprecated)
-  --use-dx                            - use dx/d8 to convert java bytecode
-  --comments-level                    - set code comments level, values: error, warn, info, debug, user-only, none, default: info
-  --log-level                         - set log level, values: quiet, progress, error, warn, info, debug, default: progress
-  -v, --verbose                       - verbose output (set --log-level to DEBUG)
-  -q, --quiet                         - turn off output (set --log-level to QUIET)
-  --version                           - print jadx version
-  -h, --help                          - print this help
+* [Intel® VTune™](https://software.intel.com/en-us/intel-vtune-amplifier-xe)
+* [Intel® Vectorization and Threading Advisor](https://software.intel.com/en-us/intel-advisor-xe)
+* [AQtime Pro, from SmartBear](https://smartbear.com/product/aqtime-pro/overview/)
+* [GlowCode](http://www.glowcode.com/summary1_gc.htm)
+* [WonderLeak](https://www.relyze.com/wonderleak_overview.html) - A high performance Windows heap and handle allocation profiler.
 
-Plugin options (-P<name>=<value>):
- 1) dex-input: Load .dex and .apk files
-    - dex-input.verify-checksum       - verify dex file checksum before load, values: [yes, no], default: yes
- 2) java-convert: Convert .class, .jar and .aar files to dex
-    - java-convert.mode               - convert mode, values: [dx, d8, both], default: both
-    - java-convert.d8-desugar         - use desugar in d8, values: [yes, no], default: no
- 3) kotlin-metadata: Use kotlin.Metadata annotation for code generation
-    - kotlin-metadata.class-alias     - rename class alias, values: [yes, no], default: yes
-    - kotlin-metadata.method-args     - rename function arguments, values: [yes, no], default: yes
-    - kotlin-metadata.fields          - rename fields, values: [yes, no], default: yes
-    - kotlin-metadata.companion       - rename companion object, values: [yes, no], default: yes
-    - kotlin-metadata.data-class      - add data class modifier, values: [yes, no], default: yes
-    - kotlin-metadata.to-string       - rename fields using toString, values: [yes, no], default: yes
-    - kotlin-metadata.getters         - rename simple getters to field names, values: [yes, no], default: yes
- 4) rename-mappings: various mappings support
-    - rename-mappings.format          - mapping format, values: [auto, TINY, TINY_2, ENIGMA, ENIGMA_DIR, MCP, SRG, TSRG, TSRG2, PROGUARD], default: auto
-    - rename-mappings.invert          - invert mapping, values: [yes, no], default: no
+## Libraries
 
-Environment variables:
-  JADX_DISABLE_ZIP_SECURITY - set to 'true' to disable all security checks for zip files
-  JADX_ZIP_MAX_ENTRIES_COUNT - maximum allowed number of entries in zip files (default: 100 000)
-  JADX_TMP_DIR - custom temp directory, using system by default
+* [Celero micro-benchmarking library](https://github.com/DigitalInBlue/Celero)
+* [Nonius library](https://nonius.io)
+* [Hayai micro benchmarking library](https://github.com/nickbruun/hayai), [into article](https://bruun.co/2012/02/07/easy-cpp-benchmarking)
+* [Google benchmark library](https://github.com/google/benchmark)
 
-Examples:
-  jadx -d out classes.dex
-  jadx --rename-flags "none" classes.dex
-  jadx --rename-flags "valid, printable" classes.dex
-  jadx --log-level ERROR app.apk
-  jadx -Pdex-input.verify-checksum=no app.apk
-```
-These options also worked on jadx-gui running from command line and override options from preferences dialog
+## Books
 
-### Troubleshooting
-Please check wiki page [Troubleshooting Q&A](https://github.com/skylot/jadx/wiki/Troubleshooting-Q&A)
+* [PDF: optimizing C++](http://www.agner.org/optimize/optimizing_cpp.pdf) - by Agner Fog. FREE
+* [Optimizing C++, WikiBooks](https://en.wikibooks.org/wiki/Optimizing_C%2B%2B) - FREE
+* The Software Optimization Cookbook: High Performance Recipes for IA-32 Platforms, 2nd Edition
+* Video Game Optimization, Eric Preisz
+* Optimized C++: Proven Techniques for Heightened Performance, Kurt Guntheroth
+* Power and Performance: Software Analysis and Optimization, Jim Kukunas
+* Systems Performance: Enterprise and the Cloud, Brendan Gregg 
+* Every Computer Performance Book, Bob Wescott 
+* C++ Concurrency in Action, Second Edition, Anthony Williams
 
-### Contributing
-To support this project you can:
-  - Post thoughts about new features/optimizations that important to you
-  - Submit decompilation issues, please read before proceed: [Open issue](CONTRIBUTING.md#Open-Issue)
-  - Open pull request, please follow these rules: [Pull Request Process](CONTRIBUTING.md#Pull-Request-Process)
+## About
+This list was started by Bartlomiej Filipek ([@fenbf](https://twitter.com/fenbf)). If you like to help please read CONTRIBUTING.md instructions and just make a pull request to this repo.
 
----------------------------------------
-*Licensed under the Apache 2.0 License*
+## License
+
+[![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
